@@ -1,22 +1,22 @@
 let intro=confirm("Shall we play Rock,Paper,Scissors");
 if (intro){
-    let userChoice=prompt("Please enter Rock,Paper,Scissors");
+    let userChoice=prompt("Please enter Rock,Paper,Scissors").trim().toLowerCase();
     if (userChoice){
-        const choices=["Rock","Paper","Scissors"];
+        const choices=["rock","paper","scissors"];
         let computerChoice=choices[Math.floor(Math.random()*choices.length)]
         let result= 
         computerChoice === userChoice 
         ? "Draw" 
-        : computerChoice ===  "Rock" 
-        ? userChoice ===  "Paper" 
+        : computerChoice ===  "rock" 
+        ? userChoice ===  "paper" 
             ? "You Winz" 
             : "Computer Winz"
-        : computerChoice === "Paper"
-        ? userChoice === "Scissors"
+        : computerChoice === "paper"
+        ? userChoice === "scissors"
             ? "You Winz"
             : "Computer Winz"
-        : computerChoice === "Scissors"
-        ? userChoice === "Rock"
+        : computerChoice === "scissors"
+        ? userChoice === "rock"
             ? "You Winz"
             : "Computer Winz"
         :"Computer Winz"
