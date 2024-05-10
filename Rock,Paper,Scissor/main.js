@@ -1,7 +1,8 @@
 let intro=confirm("Shall we play Rock,Paper,Scissors");
 if (intro){
-    let userChoice=prompt("Please enter Rock,Paper,Scissors").trim().toLowerCase();
+    let userChoice=prompt("Please enter Rock,Paper,Scissors");
     if (userChoice){
+        userChoice=userChoice.trim().toLowerCase();
         if (userChoice === "rock" ||
             userChoice === "paper" ||
             userChoice === "scissors"
@@ -33,6 +34,9 @@ if (intro){
             let playAgain=confirm("Play Again?");
             playAgain ? location.reload() : alert("Goodbye");
         }}
+    else if (userChoice===null){
+        alert("Change Your Mind! Let's Meet Next time");
+    }
     else{
         alert("Enter Nothing")
         let playAgain=confirm("Play Again?");
