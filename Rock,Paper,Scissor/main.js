@@ -30,9 +30,13 @@ if (intro){
         }
         else{
             alert("Enter Invalid Choice");
+            let playAgain=confirm("Play Again?");
+            playAgain ? location.reload() : alert("Goodbye");
         }}
     else{
         alert("Enter Nothing")
+        let playAgain=confirm("Play Again?");
+        playAgain ? location.reload() : alert("Goodbye");
     }
 }
 else{
